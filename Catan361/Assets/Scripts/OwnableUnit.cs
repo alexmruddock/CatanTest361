@@ -4,24 +4,12 @@ using UnityEngine;
 
 public abstract class OwnableUnit
 {
-    Player player;
+
+    // changes done by alex B:
+    // 1. abstract class doesn't need a constructor
+    // 2. changed player attribute for well-formedness
     
-    public OwnableUnit() {  }
-
-    public OwnableUnit(Player player) {
-
-        this.player = player;
-
-    }
-
-    public void setOwner(Player p)
-    {
-        this.player = player;
-    }
-
-    public Player getOwner()
-    {
-        return this.player;
-    }
+    Player player { get; set; };
+    
 
 }

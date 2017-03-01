@@ -2,15 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OwnableUnit : MonoBehaviour {
+public abstract class OwnableUnit
+{
+    Player player;
+    
+    public OwnableUnit() {  }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public OwnableUnit(Player player) {
+
+        this.player = player;
+
+    }
+
+    public void setOwner(Player p)
+    {
+        this.player = player;
+    }
+
+    public Player getOwner()
+    {
+        return this.player;
+    }
+
 }

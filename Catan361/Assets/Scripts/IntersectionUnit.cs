@@ -2,15 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IntersectionUnit : MonoBehaviour {
+public abstract class IntersectionUnit : OwnableUnit, HexUnit {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    Intersection intersection;
+
+    public IntersectionUnit()
+    {
+
+    }
+
+    public IntersectionUnit(Intersection intersection)
+    {
+        this.intersection = intersection;
+    }
+
+    public Intersection getLocation()
+    {
+        return this.intersection;
+    }
+
+    public void setLocation(Intersection intersection)
+    {
+        this.intersection = intersection;
+    }
+
 }

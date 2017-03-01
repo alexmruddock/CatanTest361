@@ -4,26 +4,12 @@ using UnityEngine;
 
 public abstract class IntersectionUnit : OwnableUnit, HexUnit {
 
-    Intersection intersection;
 
-    public IntersectionUnit()
-    {
-
-    }
-
-    public IntersectionUnit(Intersection intersection)
-    {
-        this.intersection = intersection;
-    }
-
-    public Intersection getLocation()
-    {
-        return this.intersection;
-    }
-
-    public void setLocation(Intersection intersection)
-    {
-        this.intersection = intersection;
-    }
+    // changes made by Alex B:
+    // 1. abstract class does not need a constructor
+    // Intersection was not set to private
+    // changed intersection to attribute
+    
+    Intersection intersection { get; set; };
 
 }
